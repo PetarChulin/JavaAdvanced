@@ -33,5 +33,4 @@ public class JA04BasicQueueOperations {
             System.out.println(minElement.orElse(0));
         }
      }
-    //a
-}
+  }
