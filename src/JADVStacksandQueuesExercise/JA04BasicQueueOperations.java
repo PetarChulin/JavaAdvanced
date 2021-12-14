@@ -32,6 +32,5 @@ public class JA04BasicQueueOperations {
             Optional<Integer> minElement = line.stream().min(Integer::compareTo);
             System.out.println(minElement.orElse(0));
         }
-        //something
     }
 }
