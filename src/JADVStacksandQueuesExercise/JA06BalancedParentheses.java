@@ -23,11 +23,10 @@ public class JA06BalancedParentheses {
             if (symbol == '{' || symbol == '[' || symbol == '(') {
                 stack.addFirst(symbol);
             } else {
-                if (!stack.isEmpty()
-                        && ((stack.peekFirst() == '{' && symbol == '}')
+                if (!stack.isEmpty() && ((stack.peekFirst() == '{' && symbol == '}')
                         || (stack.peekFirst() == '[' && symbol == ']')
                         || (stack.peekFirst() == '(' && symbol == ')'))) {
-                    stack.removeFirst();
+                    stack.pollFirst();
                 } else {
                     return false;
                 }
