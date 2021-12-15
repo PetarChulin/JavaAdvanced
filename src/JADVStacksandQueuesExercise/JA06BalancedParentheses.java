@@ -17,16 +17,16 @@ public class JA06BalancedParentheses {
     }
 
     public static boolean isBalanced(String input) {
-        ArrayDeque<Character> stack = new ArrayDeque<>();
+        ArrayDeque<Character> sequence = new ArrayDeque<>();
         for (char symbol : input.toCharArray()) {
 
             if (symbol == '{' || symbol == '[' || symbol == '(') {
-                stack.addFirst(symbol);
+                sequence.addFirst(symbol);
             } else {
-                if (!stack.isEmpty() && ((stack.peekFirst() == '{' && symbol == '}')
-                        || (stack.peekFirst() == '[' && symbol == ']')
-                        || (stack.peekFirst() == '(' && symbol == ')'))) {
-                    stack.pollFirst();
+                if (!sequence.isEmpty() && ((sequence.peekFirst() == '{' && symbol == '}')
+                        || (sequence.peekFirst() == '[' && symbol == ']')
+                        || (sequence.peekFirst() == '(' && symbol == ')'))) {
+                    sequence.pollFirst();
                 } else {
                     return false;
                 }
