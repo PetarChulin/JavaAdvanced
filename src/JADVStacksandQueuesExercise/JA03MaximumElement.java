@@ -1,6 +1,7 @@
 package JADVStacksandQueuesExercise;
 
 import java.util.ArrayDeque;
+import java.util.Collections;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -26,8 +27,11 @@ public class JA03MaximumElement {
                     sequence.pop();
                     break;
                 case "3":
-                    Optional<Integer> maxElement = sequence.stream().max(Integer::compareTo);
-                    System.out.println(maxElement.orElse(0));
+                    if (!sequence.isEmpty()) {
+                        System.out.println(Collections.max(sequence));
+                    }
+// with Optional      Optional<Integer> maxElement = sequence.stream().max(Integer::compareTo);
+//                    System.out.println(maxElement.orElse(0));
                     break;
             }
         }
