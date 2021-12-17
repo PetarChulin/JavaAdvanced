@@ -17,7 +17,6 @@ public class JA08SimpleTextEditor {
             String input = s.nextLine();
             String command = input.split(" ")[0];
             switch (command) {
-
                 case "1":
                     undoList.push(text.toString());
                     String letter = input.split(" ")[1];
@@ -36,7 +35,6 @@ public class JA08SimpleTextEditor {
                     System.out.println(text.charAt(index - 1));
                     break;
                 case "4":
-                    assert undoList.peek() != null;
                     text = new StringBuilder(undoList.pop());
                     break;
             }
