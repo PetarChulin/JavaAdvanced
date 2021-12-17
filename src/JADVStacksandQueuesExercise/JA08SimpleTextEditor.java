@@ -25,10 +25,12 @@ public class JA08SimpleTextEditor {
                 case "2":
                     undoList.push(text.toString());
                     int count = Integer.parseInt(input.split(" ")[1]);
-                    while (count > 0) {
-                        text.deleteCharAt(text.length() - 1);
-                        count--;
-                    }
+                    int start = text.length() - count;
+                    text.delete(start, start + count);
+//                    while (count > 0) {                        //variant with while()
+//                        text.deleteCharAt(text.length() - 1);
+//                        count--;
+//                    }
                     break;
                 case "3":
                     int index = Integer.parseInt(input.split(" ")[1]);
