@@ -37,8 +37,7 @@ public class JA08SimpleTextEditor {
                     break;
                 case "4":
                     assert undoList.peek() != null;
-                    text = new StringBuilder(undoList.peek());
-                    undoList.pop();
+                    text = new StringBuilder(undoList.pop());
                     break;
             }
         }
