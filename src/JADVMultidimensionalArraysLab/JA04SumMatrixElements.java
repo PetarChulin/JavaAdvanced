@@ -1,5 +1,6 @@
 package JADVMultidimensionalArraysLab;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class JA04SumMatrixElements {
@@ -20,10 +21,12 @@ public class JA04SumMatrixElements {
 
                 matrix[i][j] = Integer.parseInt(elements[j]);
                 sumElements += Integer.parseInt(elements[j]);
-//                sumElements += matrix[i][j];
+//                sumElements += matrix[i][j];      //sum variant 2
             }
         }
-        System.out.printf("%d\n%d\n%d" , rows, columns, sumElements);
+//        int sum = Arrays.stream(matrix).flatMapToInt(Arrays::stream).sum(); //sum variant 3
+//        System.out.printf("%d\n%d\n%d", rows, columns, sum);
+        System.out.printf("%d\n%d\n%d", rows, columns, sumElements);
     }
 }
 
