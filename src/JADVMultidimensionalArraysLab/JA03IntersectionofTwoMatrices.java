@@ -16,7 +16,10 @@ public class JA03IntersectionofTwoMatrices {
             String line = s.nextLine().replaceAll(" ", "");
             char[] c = line.toCharArray();
 
-            if (columns >= 0) System.arraycopy(c, 0, matrixOne[i], 0, columns);
+            if (columns >= 0) System.arraycopy(c, 0, matrixOne[i], 0, columns); //system array copy
+//            for (int j = 0; j < columns; j++) {          //with for loop
+//                matrixOne[i][j] = c[j];
+//            }
         }
         char[][] matrixTwo = new char[rows][columns];
 
@@ -24,7 +27,10 @@ public class JA03IntersectionofTwoMatrices {
             String line = s.nextLine().replaceAll(" ", "");
             char[] c = line.toCharArray();
 
-            if (columns >= 0) System.arraycopy(c, 0, matrixTwo[i], 0, columns);
+            if (columns >= 0) System.arraycopy(c, 0, matrixTwo[i], 0, columns); //system array copy
+//            for (int j = 0; j < columns; j++) {         //with for loop
+//                matrixTwo[i][j] = c[j];
+//            }
         }
         for (int i = 0; i < matrixOne.length; i++) {
             for (int j = 0; j < matrixTwo[i].length; j++) {
