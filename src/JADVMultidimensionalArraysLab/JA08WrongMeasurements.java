@@ -40,22 +40,22 @@ public class JA08WrongMeasurements {
         return rows;
     }
 
-    private static void sumAndReplace(int[][] matrix, int[][] finalMat, int sum, int digitToRep) {
+    private static void sumAndReplace(int[][] matrix, int[][] finalMat, int sum, int digitToReplace) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
 
-                if (matrix[i][j] == digitToRep) {
+                if (matrix[i][j] == digitToReplace) {
 
-                    if (i > 0 && matrix[i - 1][j] != digitToRep) {
+                    if (i > 0 && matrix[i - 1][j] != digitToReplace) {
                         sum += matrix[i - 1][j];
                     }
-                    if (j > 0 && matrix[i][j - 1] != digitToRep) {
+                    if (j > 0 && matrix[i][j - 1] != digitToReplace) {
                         sum += matrix[i][j - 1];
                     }
-                    if (j < matrix[i].length - 1 && matrix[i][j + 1] != digitToRep) {
+                    if (j < matrix[i].length - 1 && matrix[i][j + 1] != digitToReplace) {
                         sum += matrix[i][j + 1];
                     }
-                    if (i < matrix.length - 1 && matrix[i + 1][j] != digitToRep) {
+                    if (i < matrix.length - 1 && matrix[i + 1][j] != digitToReplace) {
                         sum += matrix[i + 1][j];
                     }
                     finalMat[i][j] = Integer.parseInt(String.valueOf(sum));
