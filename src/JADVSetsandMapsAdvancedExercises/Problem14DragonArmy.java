@@ -26,11 +26,8 @@ public class Problem14DragonArmy {
             ifNullValue(defaultHealth, input, values, 3);
             ifNullValue(defaultArmor, input, values, 4);
 
-            if (!dragonName.containsKey(name)) {
-                dragonName.put(name, values);
-            } else {
-                dragonName.get(name).addAll(values);
-            }
+            dragonName.putIfAbsent(name, values);
+            dragonName.get(name).addAll(values);
             dragonType.putIfAbsent(type, new TreeMap<>());
             dragonType.get(type).put(name, values);
         }
