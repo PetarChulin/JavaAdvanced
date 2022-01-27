@@ -4,7 +4,7 @@ import java.util.*;
 
 import static java.lang.System.in;
 
-public class JA09UserLogs {
+public class Problem9UserLogs {
     public static void main(String[] args) {
         Scanner s = new Scanner(in);
 
