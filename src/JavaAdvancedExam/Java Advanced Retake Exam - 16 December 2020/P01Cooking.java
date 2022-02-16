@@ -3,7 +3,7 @@ package JavaAdvancedExam;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class P02Cooking {
+public class P01Cooking {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
